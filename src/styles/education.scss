@@ -1,0 +1,142 @@
+@import "../styles/breakpoints.scss";
+
+.education-title {
+  margin-inline: 6rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+
+  @include sm {
+    margin-inline: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+.education {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @include xxl {
+    flex-direction: column;
+  }
+  &-left {
+    // background-color: aqua;
+    width: 30vw;
+    height: 30vh;
+    @include xxl {
+      height: auto;
+    }
+    @include sm {
+      width: 80%;
+    }
+
+    .left {
+      margin: 0.1rem;
+      padding: 1rem;
+      font-size: 1.5rem;
+      background-color: rgb(239, 235, 235);
+      border-radius: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      border: 1px solid;
+
+      @include lg {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        background-color: rgb(230, 210, 213);
+      }
+    }
+  }
+
+  &-right {
+    // background-color: rgb(210, 240, 250);
+    width: 50vw;
+    height: 40vh;
+    position: relative;
+    border-radius: 4rem;
+    // visibility: hidden;
+    @include sm {
+      width: 80%;
+    }
+
+    .saying {
+      text-align: center;
+      margin-block: 15%;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: darkviolet;
+
+      & p {
+        float: right;
+        margin: 5% 5% 0 0;
+      }
+    }
+
+    .right {
+      width: 50vw;
+      height: 40vh;
+      background-color: lightcyan;
+      position: absolute;
+      text-align: center;
+      top: 0%;
+      left: 0%;
+      border-radius: 4rem;
+
+      @include sm {
+        width: 100%;
+      }
+
+      //   opacity: 0;
+
+      & img {
+        width: 2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 2rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      @include lg {
+        h1 {
+          font-size: 1.3rem;
+          display: flex;
+          flex-direction: column;
+          & img {
+            margin-right: 0;
+          }
+        }
+        h2 {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+.not-visible {
+  // opacity: 1;
+  visibility: hidden;
+}
+.visible {
+  // opacity: 1;
+  visibility: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

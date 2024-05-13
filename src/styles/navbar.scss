@@ -1,0 +1,114 @@
+@import "../styles/breakpoints.scss";
+
+.navbar {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  background-color: transparent;
+  // color: white;
+  z-index: 500;
+
+  @include m2{
+    .showMenu {
+        display: flex;
+        right: 0;
+        transition: right 10s ease;
+      }
+      .hideMenu {
+        display: none;
+        transform: translateY(-100%);
+        transition: transform 10s ease-in-out;
+      }
+  }
+
+  .hamburger {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 5.5rem;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+
+    @include m2 {
+      display: block;
+    }
+  }
+
+  @include m2 {
+    height: 5rem;
+    justify-content: left;
+  }
+
+  & img {
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+
+    @include m2 {
+      // position: absolute;
+      // top: 0;
+      // left: 2.5rem;
+      width: 5rem;
+      height: 2rem;
+      margin-left: 1rem;
+    }
+  }
+
+  &_list {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+
+    @include xxl {
+      gap: 2rem;
+    }
+    @include m2 {
+      height: auto;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -10rem;
+      background-color: rgba(22, 21, 21, 0.5);
+      padding: 1.5rem;
+      margin-inline: 1rem;
+      margin-top: 4rem;
+      gap: 3rem;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+
+      
+    }
+
+    & li {
+      text-decoration: none;
+      color: white;
+      margin-inline: 0.3rem;
+
+      &:hover {
+        transform: scale(1.1);
+        color: bisque;
+      }
+      &:active {
+        text-decoration: underline;
+        text-decoration-color: red;
+      }
+    }
+  }
+}
+
+.dark {
+  background-color: rgb(8, 7, 7);
+  color: black;
+}
+.active {
+  color: blue !important;
+  font-weight: bold !important;
+}
+

@@ -1,0 +1,73 @@
+@import "../styles/breakpoints.scss";
+
+.certificates {
+  margin-inline: 6rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+
+  @include sm {
+    margin-inline: 1rem;
+  }
+}
+.card-heading {
+  text-align: center;
+  margin-block: 1rem;
+  font-size: 1.5rem;
+}
+.card {
+  position: relative;
+  width: 75vw;
+  height: 50vh;
+  margin-inline: auto;
+  display: flex;
+  //   justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+
+  @include m {
+    width: 39vw;
+  }
+  @include sm2 {
+    width: 45vw;
+  }
+  @include sm {
+    width: 65vw;
+  }
+
+  &_outerdiv {
+    width: auto;
+    height: 40vh;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-inline: 2.5rem;
+    box-shadow: 0 0 1rem black;
+    transition: transform 0.3s ease;
+    @include sm2 {
+      margin-inline: 1.5rem;
+    }
+     @include sm {
+      margin-inline: 0.5rem;
+      // width:15rem;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    & img {
+      width: 25vw;
+      height: 30vh;
+      cursor: pointer;
+    }
+    &_desc {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+  }
+}
+.card::-webkit-scrollbar {
+  display: none;
+}

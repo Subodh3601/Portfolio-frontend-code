@@ -1,0 +1,62 @@
+@import "../styles/breakpoints.scss";
+
+.experience-heading {
+  margin-inline: 6rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-image: url("../assets/Vector.png");
+  background-repeat: no-repeat;
+  background-size: 300rem;
+
+  @include sm {
+    margin-inline: 1rem;
+  }
+
+  & h3 {
+    margin: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.experience {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include xxl {
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  &-left {
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+
+    ul {
+      list-style: none;
+    }
+  }
+  & img {
+    width: 50vw;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    @include xxl {
+      width: 50vw;
+    }
+    @include sm {
+      width: 80vw;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      transform: scale(0.99);
+    }
+  }
+}

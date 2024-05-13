@@ -1,0 +1,45 @@
+@import '../styles/breakpoints.scss';
+
+
+.skills-outer-container {
+    // background-color:rgb(241, 236, 236);
+    margin-inline: 6rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem;
+    padding: 1rem;
+    margin-top: 2rem;
+
+    @include sm{
+        margin-inline: 1rem;
+    }
+    
+}
+
+.skills-heading {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.skills {
+    width: 90%;
+    // align-items: center;
+    margin-inline: auto;
+    // display: flex;
+    // justify-content: flex-start;
+    text-align: center;
+
+    &-card {
+        display: flex;
+        height: 50vh;
+        justify-content:space-around;
+        align-items: center;
+        gap: 2rem;
+
+        @include m{
+            flex-direction: column;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+    }
+}

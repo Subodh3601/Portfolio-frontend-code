@@ -1,0 +1,121 @@
+@import "../styles/breakpoints.scss";
+
+.contacts-heading {
+  margin-inline: 6rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 2rem;
+  padding: 1rem;
+  margin-block: 2rem;
+  background-image: url("../assets/Vector.png");
+  background-repeat: no-repeat;
+  background-size: 300rem;
+
+  @include sm{
+    margin-inline: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-around;
+  // align-items: center;
+  @include xxl {
+    // flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  @include m2 {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &-left {
+    // width: 30vw;
+    height: 40vh;
+    // background-color:lightgrey;
+    line-height: 2rem;
+
+    & h3 {
+      font-size: 1.5rem;
+      margin-block: 1rem;
+      text-decoration: underline;
+    }
+    & a {
+      text-decoration: none;
+      color: black;
+    }
+
+    & a span {
+      margin-left: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &-right {
+    // width: 30vw;
+
+    & h3 {
+      font-size: 1.5rem;
+      margin-block: 1rem;
+      text-decoration: underline;
+    }
+
+    & input {
+      width: 25rem;
+      height: 2.5rem;
+      border: none;
+      background-color: lightgrey;
+      border-radius: 1rem;
+      padding-left: 1rem;
+
+      @include sm3 {
+        width: 90%;
+      }
+
+      &:focus {
+        background-color: rgba(189, 189, 239, 0.5);
+      }
+    }
+
+    & textarea {
+      border: none;
+      background-color: lightgrey;
+
+      @include sm3 {
+        width: 90%;
+      }
+
+      &:focus {
+        background-color: rgba(189, 189, 239, 0.5);
+      }
+    }
+    & button {
+      width: auto;
+      border-radius: 2rem;
+      padding: 0.5rem;
+      margin: 1rem 0 1rem 0;
+      background-color: rgb(133, 133, 252);
+      color: white;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      &:active {
+        background-color: rgb(80, 80, 131);
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+.send{
+  color: green;
+}
+.not-send{
+  color: red;
+}

@@ -1,0 +1,221 @@
+@import '../styles/breakpoints.scss';
+
+
+.project{
+  margin-inline: 6rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 2rem;
+  padding: 1rem;
+  margin-block: 2rem;
+
+  @include sm{
+    margin-inline:1rem;
+  }
+
+  & h3 {
+    margin: 1rem 2rem 2rem 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+
+    
+  }
+}
+
+.projects {
+  display: flex;
+  justify-content: space-evenly;
+  // width: 80vw;
+
+  @include xl{
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  &-left {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    // margin-inline: 4rem;
+    margin-bottom: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px black;
+
+    @include lg{
+        height: auto;
+        
+        h2{
+          margin-top: 1rem;
+        }
+      }
+
+      @include sm{
+        width: 80%;
+  }
+
+    &-outerdiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-inline: 2rem;
+
+      @include lg{
+        flex-direction: column;
+        width: 37vw;
+      }
+    }
+    & a {
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: black;
+
+      & span {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: black;
+      }
+    }
+
+    &-videoDiv {
+      margin: 1rem 5rem 1rem 2rem;
+      background-color: lightgray;
+      position: relative;
+      transition: background-color 0.1s ease-in-out;
+
+      @include lg{
+        margin: 1rem 1rem 1rem 1rem;
+        
+      }
+
+      & img {
+        width: 10rem;
+        margin: 1rem;
+      }
+
+      .overlay {
+        font-size: 3.5rem;
+        position: absolute;
+        top: 35%;
+        left: 38%;
+        display: none;
+      }
+
+      &:hover {
+        .overlay {
+          display: block;
+          color: rgb(123, 248, 7);
+        }
+        cursor: pointer;
+        background-color: rgba(123, 248, 7, 0.3);
+        
+      }
+    }
+    & a {
+      font-size: 1.2rem;
+    }
+
+    &-readme {
+      width: 30%;
+      height: auto;
+      background-color: white;
+      cursor: pointer;
+
+      @include lg{
+        width: auto;
+        
+      }
+      & img {
+        width: 8rem;
+      }
+    }
+  }
+
+  &-right {
+    background-color: white;
+   
+    height: 45vh;
+    gap: 1rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px black;
+
+    @include xl{
+       width: 45vw;
+  }
+  
+    @include lg{
+    margin-bottom: 1rem;
+  }
+  @include sm{
+        width: 80%;
+        height: auto;
+        padding: 1rem;
+  }
+
+    &-desc {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      & a {
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+      }
+      & a img {
+        margin-inline: 2rem;
+        width: 10rem;
+        //   height: 2rem;
+      }
+    }
+  }
+}
+
+.video-outer-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(69, 70, 70, 0.8);
+
+  & video {
+    position: absolute;
+    top: 10%;
+    left: 20vw;
+    width: 60vw;
+    height: 80vh;
+    // display: none;
+  }
+}
+
+.pdf-viewer-outer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(69, 70, 70, 1);
+
+  .close-pdf {
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
+    font-size: 2.5rem;
+    background-color: red;
+    z-index: 10000;
+    cursor: pointer;
+  }
+}
+
+@media (max-width:1150px) {
+  
+}
