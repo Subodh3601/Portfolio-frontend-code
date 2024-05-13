@@ -1,11 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import c1 from '../assets/frontend1-1.png';
-import c2 from '../assets/backend-1.png';
-import c3 from '../assets/react-1.png';
+import c1 from "../assets/frontend1-1.png";
+import c2 from "../assets/backend-1.png";
+import c3 from "../assets/react-1.png";
 import c4 from "../assets/aptitude-1.png";
-import c5 from '../assets/dbms1-1.png';
-
-
+import c5 from "../assets/dbms1-1.png";
 
 const initialState = {
   frontend: {
@@ -113,7 +111,7 @@ const initialState = {
     {
       filename: c3,
       desc: "react",
-      link: "https://certificate.codingninjas.com/view/3468f1a60280c5af",
+      link: "https://certificate.codingninjas.com/view/4189ee026061913c",
     },
     {
       filename: c4,
