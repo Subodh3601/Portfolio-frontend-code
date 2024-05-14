@@ -3,16 +3,16 @@
   background-color: lightgray;
   height: 33vh;
   border-radius: 2rem;
-  box-shadow: 0 0 1rem ;
+  box-shadow: 0 0 1rem;
   transition: transform 0.3s ease;
 
-  &:active{
+  &:active {
     transform: scale(0.9);
   }
-  
+
   &:hover .card-container_innerdiv {
-      visibility: visible; // Make inner div visible when hovering over the image
-      transform: scale(1);
+    visibility: visible; // Make inner div visible when hovering over the image
+    transform: scale(1);
   }
 
   & img {
@@ -21,8 +21,6 @@
     height: 30vh;
     border-radius: 2rem;
     cursor: pointer;
-
-    
   }
 }
 
@@ -49,38 +47,37 @@
   }
 }
 
-.skills_details{
+.skills_details {
   position: fixed;
   background-color: rgba(56, 56, 56, 0.9);
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh; 
+  height: 100vh;
   z-index: 1000;
   overflow-y: scroll;
 
-  & table{
+  & table {
     background-color: antiquewhite;
-    width: 80vw;
-    margin: 1rem;
+    width: 70vw;
+    margin: 5rem;
     margin-inline: auto;
     height: auto;
     color: black;
     border: 6px solid rgb(4, 4, 4);
-    
 
-    & th{
+    & th {
       background-color: black;
       color: white;
       padding: 0.8rem;
     }
     // & td {
-      // border: 1px solid black;
+    // border: 1px solid black;
     // }
 
-    .topic-name{
+    .topic-name {
       margin-inline: auto;
-      background-color:rgb(234, 169, 85);
+      background-color: rgb(234, 169, 85);
       width: 7rem;
       height: auto;
       font-weight: 700;
@@ -88,17 +85,17 @@
       padding: 0.5rem;
     }
 
-    ul li{
+    ul li {
       font-size: 1.2rem;
       list-style-type: none;
       margin-bottom: 10px;
     }
 
-    tbody tr:nth-child(even){
+    tbody tr:nth-child(even) {
       background-color: rgb(201, 200, 199);
     }
   }
 }
-.hidePage{
+.hidePage {
   display: none;
 }

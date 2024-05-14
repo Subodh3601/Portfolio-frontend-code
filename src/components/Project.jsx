@@ -82,26 +82,9 @@ const Project = () => {
 
       {videoDisplay && (
         <div className="video-outer-div" ref={videoRef} onClick={closePlayer}>
-          {/* <video
-            src="https://drive.google.com/file/d/1E3K_V2yM3tdi05UEBHkn1YXyMucawBTa/view?usp=sharing"
-            type="video/mp4"
-            controls
-            autoPlay
-            loop
-            muted
-          >
-            Your browser does not support the video tag.
-          </video> */}
+          
           <iframe
             src="https://drive.google.com/file/d/1E3K_V2yM3tdi05UEBHkn1YXyMucawBTa/preview"
-            width="640"
-            height="480"
-            style={{
-              position: "fixed",
-              top: "25%",
-              left: "25%",
-              zIndex: "100000000",
-            }}
             allow="autoplay"
           ></iframe>
         </div>
