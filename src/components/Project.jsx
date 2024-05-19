@@ -5,7 +5,7 @@ import readmeImg from "../assets/readme.webp";
 import otherProjectImg from "../assets/otherProject.jpg";
 import projectImg from "../assets/projectimg.jpg";
 import { useRef, useState } from "react";
-import document from "../assets/4wheel.pdf";
+import document from "../assets/Gabble.com.pdf";
 import vector from "../assets/Vector.png";
 // Core viewer
 import { Viewer, Worker } from "@react-pdf-viewer/core";
@@ -57,11 +57,8 @@ const Project = () => {
               </div>
             </div>
 
-            <a
-              href="https://github.com/Subodh3601/4Wheel.com-Complete-codebase/tree/master"
-              target="_blank"
-            >
-              <span>GitHub Link</span>
+            <a href="https://gabble-com.onrender.com" target="_blank">
+              <span>Gabble.com</span>
             </a>
           </div>
 
@@ -82,9 +79,8 @@ const Project = () => {
 
       {videoDisplay && (
         <div className="video-outer-div" ref={videoRef} onClick={closePlayer}>
-          
           <iframe
-            src="https://drive.google.com/file/d/1E3K_V2yM3tdi05UEBHkn1YXyMucawBTa/preview"
+            src="https://drive.google.com/file/d/1ufkvk_Er1RVfMYoJn1-VZki1U00p-Nyl/preview"
             allow="autoplay"
           ></iframe>
         </div>
